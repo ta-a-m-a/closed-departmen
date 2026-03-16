@@ -1,0 +1,88 @@
+
+  body {
+    width: 80%;
+    margin: auto;
+    background-color: rgb(34, 40, 49);
+    padding: 20px;
+  }
+
+
+  .highlight{
+    background-color: bisque;
+    font-size: 30px;
+  }
+
+
+
+
+  .simdihepsi{
+    font-size: 50px;
+    color: bisque;
+    background-color: firebrick;
+  }
+
+  ul{
+    background-color: rgba(163, 255, 101, 0.292);
+    color: rgb(175, 257, 47);
+    padding: 10px;
+  }  
+  p{
+    color: greenyellow;
+  }
+  .white{
+    color: whitesmoke;
+  }
+  .italic{
+    font-style: italic;
+  }
+  .main-content {
+    width: 70%;
+    float: left;
+    padding: 10px;
+  }
+  
+  .betania {
+  font-family: "Betania Patmos In", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.neon{
+  font-size: 30px;
+    color: rgb(175, 257, 47);
+
+}
+
+.relativeDiv {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+
+.absoluteDiv {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.fixedDiv {
+  position: fixed;
+
+
+}
+
+/* GRAIN (NOISE) DOKUSU */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Çok önemli: Tıklamaları engellemesini önler! */
+  z-index: 9999; /* Sayfadaki her şeyin üzerinde durmasını sağlar */
+  opacity: 0.10; /* Kumlanma yoğunluğu: 0.01 (çok hafif) ile 1 (çok yoğun) arası değiştirebilirsin */
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
+}
