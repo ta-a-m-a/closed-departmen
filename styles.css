@@ -1,125 +1,90 @@
 
-  body {
-    width: 80%;
-    margin: auto;
-    background-color: rgb(55, 56, 62);
-    padding: 20px;
-  }
+body {
+    background-color: #111;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace; /* Daha ham, kod/manifesto hissiyatı için */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #7f0505; /* Neon yeşili/mavi vurgu */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #7f0505;
+}
 
 
-  .highlight{
-    background-color: bisque;
-    font-size: 30px;
-  }
+.image-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
 
+.image-gallery img {
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(100%); /
+    transition: all 0.4s ease;
+    border: 1px solid #333;
+}
 
+.image-gallery img:hover {
+    filter: grayscale(0%); 
+    transform: scale(1.05);
+    border-color: #7f0505;
+}
 
+/* Konteyner ve İçerik */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
 
-  .simdihepsi{
-    font-size: 50px;
-    color: bisque;
-    background-color: firebrick;
-  }
-
-  ul{
-    background-color: rgba(163, 255, 101, 0.292);
-    color: rgb(175, 257, 47);
-    padding: 10px;
-  }  
-  p{
-    color: greenyellow;
-  }
-  .white{
-    color: whitesmoke;
-  }
-  .italic{
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    border-left: 2px solid #333;
+    padding-left: 15px;
     font-style: italic;
-  }
-  .main-content {
-    width: 70%;
-    float: left;
-    padding: 10px;
-  }
-  
-  .betania {
-  font-family: "Betania Patmos In", cursive;
-  font-weight: 400;
-  font-style: normal;
+    color: #888;
+}
+
+/* Neon Yazı Efekti */
+.neon h4 {
+    color: #fff;
+    text-shadow: 
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #7f0505,
+      0 0 40px #7f0505;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 
-.neon{
-  font-size: 30px;
-    color: rgb(175, 257, 47);
-
+.article-content {
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-.relativeDiv {
-  position: relative;
-  top: 20px;
-  left: 30px;
-}
-
-
-.absoluteDiv {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-}
-
-.fixedDiv {
-  position: fixed;
-
-
-}
-
-
-
-.flex-container{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-/* GRAIN (NOISE) DOKUSU */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* Çok önemli: Tıklamaları engellemesini önler! */
-  z-index: 9999; /* Sayfadaki her şeyin üzerinde durmasını sağlar */
-  opacity: 0.08; /* Kumlanma yoğunluğu: 0.01 (çok hafif) ile 1 (çok yoğun) arası değiştirebilirsin */
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
-}
-
-
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.menu-container {
-
-  color: brown;
-  background-color: blue;
-  padding: 20px;
-}
-
-
-
-.menu{
-  border: 1px solid #fff;
-  width: 900px;
-
-}
-
-.photo-grid {
-  display: flex
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #7f0505;
+    text-transform: uppercase;
+    font-weight: bold;
 }
